@@ -2,6 +2,9 @@ import React from "react";
 import { Spotlight } from "./ui/Spotlight";
 import { GridBackground } from "./ui/GridBackground";
 import { TypewriterEffect } from "./ui/TypewriterEffect";
+import { TextGenerateEffect } from "./ui/TextGenEffect";
+import MagicButton from "./ui/MagicButton";
+import { MdWork } from "react-icons/md";
 
 const Hero = () => {
   const wordsTyped = [
@@ -34,13 +37,18 @@ const Hero = () => {
             Next experience
           </h2>
 
-          <TypewriterEffect
-            className="text-center text-[3.2rem] md:text-5xl lg:text-6xl text-blue-700"
-            words={wordsTyped}
+          <TextGenerateEffect
+            words="Your vision, expertly coded!"
+            className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl mt-4">
             This will be done by Samuel Eke
           </p>
+          <MagicButton
+            title="See my works"
+            icon={<MdWork />}
+            position="right"
+          />
         </div>
       </div>
     </div>
