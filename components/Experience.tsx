@@ -1,8 +1,12 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { workExperience } from "@/data";
 import { Button } from "./ui/MovingBorders";
+import { Modal } from "./ui/ModalBox";
 
 function Experience() {
+  const [selectedCard, setSelectedCard] = useState<any>(null);
+
   return (
     <div>
       {" "}
@@ -20,6 +24,7 @@ function Experience() {
               //   random duration will be fun , I think , may be not
               duration={Math.floor(Math.random() * 10000) + 10000}
               borderRadius="1.75rem"
+              onClick={() => setSelectedCard(card)}
               style={{
                 //   add these two
                 //   you can generate the color from here https://cssgradient.io/
@@ -49,6 +54,26 @@ function Experience() {
             </Button>
           ))}
         </div>
+        <Modal
+          isOpen={!!selectedCard}
+          onClose={() => setSelectedCard(null)}>
+          {selectedCard && (
+            <div className="max-w-2xl">
+              <h2 className="text-2xl font-bold mb-4">{selectedCard.title}</h2>
+              <img
+                src={selectedCard.thumbnail}
+                alt={selectedCard.title}
+                className="w-32 mb-4"
+              />
+              <p className="text-white-100">{selectedCard.desc}</p>
+              <button
+                onClick={() => setSelectedCard(null)}
+                className="mt-6 px-4 py-2 bg-purple text-white rounded-md hover:bg-purple/80">
+                Close
+              </button>
+            </div>
+          )}
+        </Modal>
       </div>
     </div>
   );

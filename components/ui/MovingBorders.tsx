@@ -17,6 +17,7 @@ export function Button({
   containerClassName,
   borderClassName,
   duration,
+  onClick,
   className,
   ...otherProps
 }: {
@@ -26,6 +27,7 @@ export function Button({
   containerClassName?: string;
   borderClassName?: string;
   duration?: number;
+  onClick?: () => void;
   className?: string;
   [key: string]: any;
 }) {
@@ -38,7 +40,8 @@ export function Button({
       style={{
         borderRadius: borderRadius,
       }}
-      {...otherProps}>
+      {...otherProps}
+      onClick={onClick}>
       <div
         className="absolute inset-0"
         style={{ borderRadius: `calc(${borderRadius} * 0.96)` }}>
