@@ -9,6 +9,8 @@ import Lottie from "react-lottie";
 import animationData from "@/data/lottie/devStation.json";
 import { FaFileDownload } from "react-icons/fa";
 import { saveAs } from "file-saver";
+import { Button } from "./ui/MovingBorders";
+import { SpotlightNew } from "./ui/spotlight-new";
 
 const Hero = () => {
   const lottieOptions = {
@@ -22,13 +24,13 @@ const Hero = () => {
 
   const handleCVDownload = () => {
     console.log("download pressed");
-    const fileUrl = "/documents/cvFrontend.docx";
+    const fileUrl = "/document/Frontend Developer_2.pdf";
     saveAs(fileUrl, "samuel-eke-resume.pdf");
   };
 
   return (
     <div className="pb-20 pt-36">
-      <Spotlight
+      {/* <Spotlight
         className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
         fill="white"
       />
@@ -39,7 +41,8 @@ const Hero = () => {
       <Spotlight
         className="top-28 left-80 h-[80vh] w-[50vw] transform origin-center scale-100"
         fill="blue"
-      />
+      /> */}
+      <SpotlightNew />
       <GridBackground />
       <div className="flex flex-row justify-between relative my-20 z-10">
         <div className="max-w-[89w] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
@@ -60,12 +63,13 @@ const Hero = () => {
               icon={<MdWork />}
               position="right"
             />
-            <MagicButton
-              title="Download CV"
-              icon={<FaFileDownload />}
-              position="right"
-              handleClick={handleCVDownload}
-            />
+            <Button
+              className="p-3 gap-1"
+              borderRadius="1.8rem"
+              onClick={handleCVDownload}
+              duration={5000}>
+              Download Resume {<FaFileDownload />}
+            </Button>
           </div>
         </div>
         <div className="hidden md:block">

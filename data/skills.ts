@@ -1,4 +1,4 @@
 export const mySkills = [
-  ["ReactJS", "NextJS", "Python", "Java"],
+  ["ReactJS", "NextJS", "Tailwind CSS", "Java"],
   ["C++", "MySQL", "ExpressJS"],
 ];
