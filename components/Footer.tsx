@@ -1,7 +1,7 @@
 import { FaLocationArrow } from "react-icons/fa6";
-
 import { socialMedia } from "@/data";
 import MagicButton from "./ui/MagicButton";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -44,12 +44,20 @@ const Footer = () => {
             <div
               key={info.id}
               className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300">
-              <img
-                src={info.img}
-                alt="icons"
-                width={20}
-                height={20}
-              />
+              <a
+                key={info.id}
+                href={info.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300">
+                <Image
+                  src={info.img}
+                  alt="icons"
+                  width={20}
+                  height={20}
+                  priority={false}
+                />
+              </a>
             </div>
           ))}
         </div>

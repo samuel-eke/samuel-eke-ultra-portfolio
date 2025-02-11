@@ -49,7 +49,7 @@ export const gridItems = [
 
   {
     id: 5,
-    title: "Currently building a JS Animation library",
+    title: "Currently building an AI based Issues Tracker",
     description: "The Inside Scoop",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -72,35 +72,19 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://github.com/adrianhajdin?tab=repositories",
+    title: "Law Firm Portfolio website",
+    des: "Built a portfolio website for a law firm, using ReactJS and Bootstrap and SCSS",
+    img: "/proj2.jpg",
+    iconLists: ["/re.svg", "/tail.svg", "/fm.svg"],
+    link: "https://",
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/zoom-clone",
-  },
-  {
-    id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/ai_saas_app",
-  },
-  {
-    id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://github.com/adrianhajdin/iphone",
+    title: "File Converter for custom file format (.pro)",
+    des: "Used React and file converter library to build a website to help convert files from propresenter format to a useable .txt format",
+    img: "/proj1.jpg",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
+    link: "https://",
   },
 ];
 
@@ -173,23 +157,23 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    title: "Faculty-cum Instructor, Aptech Computer Education",
+    desc: "Trained, mentored and managed students interest in learning, building and deploying softwares with current technologies such as: Java, C, C++, Web development, Fullstack web development, etc.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
   {
     id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-    className: "md:col-span-2", // change to md:col-span-2
+    title: "Business Development Manager, DocumentOne (ETX-NG)",
+    desc: "Led strategic initiatives to drive business growth, developed new market opportunities, and managed key client relationships. Implemented data-driven strategies resulting in 40% revenue growth and established partnerships with major industry players.",
+    className: "md:col-span-2",
     thumbnail: "/exp2.svg",
   },
   {
     id: 3,
     title: "Freelance App Dev Project",
     desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", // change to md:col-span-2
+    className: "md:col-span-2",
     thumbnail: "/exp3.svg",
   },
   {
@@ -205,13 +189,16 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    href: "https://github.com/samuel-eke",
   },
   {
     id: 2,
     img: "/twit.svg",
+    href: "https://x.com/DoNtHe_KinG",
   },
   {
     id: 3,
     img: "/link.svg",
+    href: "https://www.linkedin.com/in/samuelekeekeofficial/",
   },
 ];
