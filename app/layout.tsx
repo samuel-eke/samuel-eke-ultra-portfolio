@@ -12,7 +12,6 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "The Samuel Eke portfolio",
   description: "Build your own website and mobile application",
-  viewport: "width=device-width, initial-scale=1",
 };
 
 export default function RootLayout({
