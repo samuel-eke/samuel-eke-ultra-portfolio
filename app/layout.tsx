@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import { Poppins } from "next/font/google";
-
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"; //this themeprovider is used to manage the modes of the application from light to dark n vis-versa
 
@@ -13,7 +11,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "The Samuel Eke portfolio",
-  description: "Website and Webapp development that is for you",
+  description: "Build your own website and mobile application",
   viewport: "width=device-width, initial-scale=1",
 };
 

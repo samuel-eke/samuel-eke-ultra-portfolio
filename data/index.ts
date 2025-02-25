@@ -8,7 +8,7 @@ export const navItems = [
 export const gridItems = [
   {
     id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
+    title: "I implement the best version of client's ideas",
     description: "",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
@@ -29,7 +29,7 @@ export const gridItems = [
   {
     id: 3,
     title: "My tech stack",
-    description: "I constantly try to improve",
+    description: "I am able to skill up very fast",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center",
@@ -38,7 +38,7 @@ export const gridItems = [
   },
   {
     id: 4,
-    title: "Tech enthusiast with a passion for development.",
+    title: "I love helping businesses succeed with Tech",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
@@ -84,8 +84,16 @@ export const projects = [
     des: "Used React and file converter library to build a website to help convert files from propresenter format to a useable .txt format",
     img: "/proj1.jpg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
-    link: "https://",
+    link: "https://prototxt.netlify.app/",
   },
+  {
+    id: 3,
+    title: "Virtual Casino",
+    des: "Built on interest with ReactJS. A website that users can come and play casino games without loosing money",
+    img: "/proj3.jpg",
+    iconLists: ["/re.svg"],
+    link: "https://casinosamuel.netlify.app/"
+  }
 ];
 
 export const testimonials = [
@@ -171,15 +179,8 @@ export const workExperience = [
   },
   {
     id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2",
-    thumbnail: "/exp3.svg",
-  },
-  {
-    id: 4,
     title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
+    desc: "Currently helping a client to deliver a game-changer betting platform",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   },

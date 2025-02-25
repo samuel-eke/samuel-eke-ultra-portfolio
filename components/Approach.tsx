@@ -26,9 +26,7 @@ function Approach() {
         <Card
           title="Development & Progress Update"
           icon={<AceternityIcon order="Phase 2" />}
-          des="Once we agree on the plan, I cue my lofi playlist and dive into
-          coding. From initial sketches to polished code, I keep you updated
-          every step of the way.">
+          des="Once we agree on the plan, constant communication is engaged to ensure that what is implmented is what is captured in your idea">
           <CanvasRevealEffect
             animationSpeed={3}
             // change bg-black to bg-pink-900
@@ -44,7 +42,7 @@ function Approach() {
         <Card
           title="Development & Launch"
           icon={<AceternityIcon order="Phase 3" />}
-          des="This is where the magic happens! Based on the approved design, 
+          des="Based on the approved design,
           I'll translate everything into functional code, building your website
           from the ground up.">
           <CanvasRevealEffect
