@@ -3,7 +3,7 @@ import { withSentryConfig } from '@sentry/nextjs';
 const nextConfig = {
     // output: "export",
     // typescript: {
-    //     ignoreBuildErrors: true,
+    //   ignoreBuildErrors: true,
     // }
 };
 
@@ -40,4 +40,9 @@ export default withSentryConfig(nextConfig, {
     // https://docs.sentry.io/product/crons/
     // https://vercel.com/docs/cron-jobs
     automaticVercelMonitors: true,
+
+    // Option 1: Delete source maps after upload to keep them from being served in production
+    sourcemaps: {
+        deleteSourcemapsAfterUpload: true,
+    },
 });
