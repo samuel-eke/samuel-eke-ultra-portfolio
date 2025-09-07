@@ -6,7 +6,8 @@ import { GlobeDemo } from "./GridGlobe";
 import { mySkills } from "@/data/skills";
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
-import Lottie from "react-lottie";
+import dynamic from "next/dynamic";
+const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
 import animationData from "@/data/confetti.json";
 import MagicButton from "./MagicButton";
 
@@ -147,7 +148,8 @@ export const BentoGridItem = ({
                     rendererSettings: {
                       preserveAspectRatio: "xMidYMid slice",
                     },
-                  }}
+                    }}
+                  eventListeners={[]}
                 />
               </div>
               <MagicButton

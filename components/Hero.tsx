@@ -4,7 +4,8 @@ import { GridBackground } from "./ui/GridBackground";
 import { TextGenerateEffect } from "./ui/TextGenEffect";
 import MagicButton from "./ui/MagicButton";
 import { MdWork } from "react-icons/md";
-import Lottie from "react-lottie";
+import dynamic from "next/dynamic";
+const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
 import animationData from "@/data/lottie/devStation.json";
 import { FaFileDownload } from "react-icons/fa";
 import { saveAs } from "file-saver";
@@ -24,7 +25,7 @@ const Hero = () => {
 
   const handleCVDownload = () => {
     console.log("download pressed");
-    const fileUrl = "/document/Frontend Developer_2.pdf";
+    const fileUrl = "/documents/Frontend Developer_2.pdf";
     saveAs(fileUrl, "samuel-eke-resume.pdf");
   };
   return (
@@ -65,6 +66,7 @@ const Hero = () => {
             options={lottieOptions}
             height={400}
             width={400}
+            eventListeners={[]}
           />
         </div>
       </div>

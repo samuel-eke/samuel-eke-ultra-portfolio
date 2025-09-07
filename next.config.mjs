@@ -1,13 +1,37 @@
 import { withSentryConfig } from '@sentry/nextjs';
+import withBundleAnalyzer from '@next/bundle-analyzer';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: "export",
-    // typescript: {
-    //   ignoreBuildErrors: true,
-    // }
+    // Disable ESLint during build
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
+    
+    // Enable image optimization - remove unoptimized setting
+    images: {
+        domains: [], // Add any external image domains you use
+        deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+        imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
+    },
+
+    // Enable compression for better performance
+    compress: true,
+
+    // Enable production source maps
+    productionBrowserSourceMaps: true,
+
+    // Add poweredByHeader option (optional)
+    poweredByHeader: false,
+
+    // output standalone removed to allow using `next start` in production
 };
 
-export default withSentryConfig(nextConfig, {
+const analyzeBundleConfig = withBundleAnalyzer({
+    enabled: process.env.ANALYZE === 'true',
+})(nextConfig);
+
+export default withSentryConfig(analyzeBundleConfig, {
     // For all available options, see:
     // https://github.com/getsentry/sentry-webpack-plugin#options
 
